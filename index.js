@@ -1,0 +1,25 @@
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+"/"];
+let passwordlength = 15
+
+document.getElementById("button-el")
+let containerEl = document.getElementById("container-el")
+let containerEl2 = document.getElementById("container-el2")
+
+
+function getRandomCharacter() {
+        let randomChar = Math.floor(Math.random()* characters.length)
+        return characters[randomChar]    
+    }
+
+function passwordGen() {
+    let randomPassword = ""
+    let randomPassword2 = ""
+    for (let i = 0; i < passwordlength; i++) {
+        randomPassword += getRandomCharacter()
+        randomPassword2 += getRandomCharacter()
+    }
+    containerEl.textContent = randomPassword
+    containerEl2.textContent = randomPassword2
+}
+ passwordGen()
