@@ -22,4 +22,3 @@ function passwordGen() {
     containerEl.textContent = randomPassword
     containerEl2.textContent = randomPassword2
 }
- passwordGen()
