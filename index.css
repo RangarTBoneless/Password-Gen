@@ -2,10 +2,7 @@ body {
     margin-left: 52px;
     width: 550px;
     background-color: #1F2937;
-    
-    
-    
-    
+        
 }
 
 h1 {
@@ -60,18 +57,17 @@ button {
     
 }
 
-.containerEl {
+.containerEl, .containerEl2 {
     height: 29px;
     padding-top: 10px;
     width: 211px;
     background-color: #273549;
     border-radius: 5px;
+    cursor: pointer;
+    
 }
 
-.containerEl2 {
-    height: 29px;
-    padding-top: 10px;
-    width: 211px;
-    background-color: #273549;
-    border-radius: 5px;
+#container-el:hover,
+#container-el2:hover {
+    opacity: 0.8;
 }

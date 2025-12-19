@@ -22,3 +22,18 @@ function passwordGen() {
     containerEl.textContent = randomPassword
     containerEl2.textContent = randomPassword2
 }
+
+function copyToClipboard(element) {
+    const text = element.textContent
+    if ( !text ) return
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            element.textContent = "Copied"
+        setTimeout(() => {
+            element.textContent = text
+            }, 1000)
+        })
+        .catch(err => {
+            console.error("Copy failed", err)
+        })
+}
